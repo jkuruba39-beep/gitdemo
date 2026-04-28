@@ -1,0 +1,102 @@
+<mvc:View
+    controllerName="anubav.controller.Main"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+
+    <VBox class="sapUiSmallMargin" width="100%">
+
+        <!-- 🔹 FORM SECTION -->
+        <Panel headerText="Create Vendor" expandable="true" expanded="true">
+
+            <f:SimpleForm editable="true" layout="ResponsiveGridLayout">
+
+                <Label text="Company Name"/>
+                <Input id="idCompany" value="{/postPayload/companyName}"  placeholder="Enter Company Name"/>
+
+                <Label text="Contact No"/>
+                <Input id="idContact" value="{/postPayload/contactNo}"  placeholder="Enter Contact Number"/>
+
+                <Label text="Email"/>
+                <Input id="idEmail" value="{/postPayload/email}" placeholder="Enter Email"/>
+                 <Label text="Reg Date"/>
+                <Input id="idDate"  value="{/postPayload/gstNo}" placeholder="YYYY-MM-DD"/>
+
+
+                <Label text="GST Number"/>
+                <Input id="idGst" value="{/postPayload/regDate}" placeholder="Enter GST Number"/>
+
+               
+                <!-- 🔹 Create Button -->
+                <Button 
+                    text="Create Vendor" 
+                    type="Emphasized"
+                    press="onCreate"/>
+
+            </f:SimpleForm>
+
+        </Panel>
+
+        <!-- 🔹 LOAD BUTTON -->
+        <Button 
+            text="Load Data" 
+            press="load"
+            class="sapUiSmallMarginTop"/>
+
+        <!-- 🔹 TABLE -->
+        <Table 
+            id="idtable" 
+            items="{/vendor}">
+
+            <columns>
+
+                <Column>
+                    <Text text="Company Name"/>
+                </Column>
+
+                <Column>
+                    <Text text="Contact No"/>
+                </Column>
+
+                <Column>
+                    <Text text="Email"/>
+                </Column>
+
+                <Column>
+                    <Text text="GST Number"/>
+                </Column>
+
+                <Column>
+                    <Text text="Reg Date"/>
+                </Column>
+
+                <Column>
+                    <Text text="Actions"/>
+                </Column>
+
+            </columns>
+
+            <items>
+                <ColumnListItem>
+                    <cells>
+
+                        <Text text="{companyName}"/>
+                        <Text text="{contactNo}"/>
+                        <Text text="{email}"/>
+                        <Text text="{gstNo}"/>
+                        <Text text="{regDate}"/>
+
+                        <Button 
+                            text="Delete" 
+                            type="Reject"
+                            press="onDelete"/>
+
+                    </cells>
+                </ColumnListItem>
+            </items>
+
+        </Table>
+
+    </VBox>
+
+</mvc:View>
