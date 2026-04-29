@@ -6,4 +6,6 @@ applications:
     buildpacks:
       - java_buildpack
     env:
-      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }'
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }' 
+	  
+	  

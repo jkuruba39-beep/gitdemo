@@ -7,7 +7,7 @@
     <VBox class="sapUiSmallMargin" width="100%">
 
         <!-- 🔹 FORM SECTION -->
-        <Panel headerText="Create Vendor" expandable="true" expanded="true">
+        <Panel headerText="Create Vendor"  expanded="true">
 
             <f:SimpleForm editable="true" layout="ResponsiveGridLayout">
 
