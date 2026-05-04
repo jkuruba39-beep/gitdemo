@@ -1,10 +1,12 @@
 applications:
-  - name: mygitdb
+  - name: gitdemo1
     path: target/gitdemo-0.0.1-SNAPSHOT.war
     memory: 1024M
-    random-route: true
     buildpacks:
       - java_buildpack
-    
+    routes:
+      - route: gitdemo1.cfapps.us10-001.hana.ondemand.com
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }'
 	  
 	  
