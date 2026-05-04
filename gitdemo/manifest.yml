@@ -8,5 +8,3 @@ applications:
       - route: gitdemo1.cfapps.us10-001.hana.ondemand.com
     env:
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 17.+ } }'
-	  
-	  
